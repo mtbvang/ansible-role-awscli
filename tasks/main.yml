@@ -28,6 +28,7 @@
     owner: "{{ item.username }}"
     group: "{{ item.group | default(item.username) }}"
     mode: 0600
+    force: "{{ force_config_file }}"
   become: yes
   become_user: "{{ item.username }}"
   with_items: "{{ awscli_users }}"
@@ -39,6 +40,7 @@
     owner: "{{ item.username }}"
     group: "{{ item.group | default(item.username) }}"
     mode: 0600
+    force: "{{ force_credentials_file }}"
   become: yes
   become_user: "{{ item.username }}"
   with_items: "{{ awscli_users }}"

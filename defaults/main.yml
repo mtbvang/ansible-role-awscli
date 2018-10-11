@@ -4,3 +4,7 @@
 awscli_version: 1.11.73
 
 awscli_users: []
+
+force_config_file: no
+
+force_credentials_file: no
